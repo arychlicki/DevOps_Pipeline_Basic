@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: '$(system.defaultWorkingDirectory)/IdentityService/pom.xml'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageToolOption: 'Cobertura'
